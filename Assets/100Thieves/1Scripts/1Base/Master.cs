@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class Master : MonoBehaviour
 {
-    [SerializeField] private Image _100thievesSticker;
+    [SerializeField] private ManagerUI _managerUI;
 
     void Start()
     {
         DontDestroyOnLoad(this);
-        _100thievesSticker.enabled = true;
+
+        _managerUI.Setup();
     }
 }
