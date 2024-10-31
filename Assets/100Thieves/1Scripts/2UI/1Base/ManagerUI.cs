@@ -16,6 +16,7 @@ public class ManagerUI : MonoBehaviour
             {
                 _screensUI.Add(screen.name, screen);
                 screen.HideScreen();
+                screen.Setup();
             }
         }
 

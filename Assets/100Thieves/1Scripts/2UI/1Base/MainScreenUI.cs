@@ -4,6 +4,11 @@ using UnityEngine;
 
 public abstract class MainScreenUI : MonoBehaviour, IScreenUI
 {
+    public virtual void Setup()
+    {
+
+    }
+
     public void ShowScreen()
     {
         gameObject.SetActive(true);
