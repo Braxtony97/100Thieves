@@ -5,7 +5,7 @@ public static class Enums
         LoadScreen,
         MainMenu,
         SinglePlayerMode,
-        Shop,
+        StoreScreen,
         Setting
     }
 

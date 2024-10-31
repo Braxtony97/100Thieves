@@ -2,9 +2,10 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class LoadScreen : MainScreenUI
+public class StoryScreen : MainScreenUI
 {
-    [SerializeField] private Button _mainMenuButton;
+    [Header("Control Buttons")]
+    [SerializeField] private Button _back;
 
     public override void Setup()
     {
@@ -15,7 +16,7 @@ public class LoadScreen : MainScreenUI
 
     private void SetListeners()
     {
-        _mainMenuButton.onClick.AddListener(() =>
+        _back.onClick.AddListener(() =>
         {
             Master.Instance.ManagerUI.ShowScreen(Enums.ScreenView.MainMenu.ToString());
         });
