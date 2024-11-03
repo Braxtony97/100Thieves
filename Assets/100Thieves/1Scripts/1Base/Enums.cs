@@ -4,9 +4,15 @@ public static class Enums
     {
         LoadScreen,
         MainMenu,
-        SinglePlayerMode,
+        PlayModeScreen,
         StoreScreen,
         Setting
+    }
+
+    public enum Scene
+    {
+        MainScene,
+        PlayMode
     }
 
     public enum WeaponType
