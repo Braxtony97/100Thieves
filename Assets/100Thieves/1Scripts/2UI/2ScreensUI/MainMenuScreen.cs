@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 
@@ -23,6 +24,8 @@ public class MainMenuScreen : MainScreenUI
 
     private void SetListeners()
     {
+        _play.onClick.AddListener(LoadPlayMode);
+
         _store.onClick.AddListener(() =>
         {
             Master.Instance.ManagerUI.ShowScreen(Enums.ScreenView.StoreScreen.ToString());
@@ -36,10 +39,16 @@ public class MainMenuScreen : MainScreenUI
         });
     }
 
+    public void LoadPlayMode()
+    {
+        Master.Instance.LoadScene(Enums.Scene.PlayMode.ToString());
+        Master.Instance.ManagerUI.ShowScreen(Enums.ScreenView.PlayModeScreen.ToString());
+    }
+
     private void OnExitButtonClick()
     {
 #if UNITY_EDITOR
-        Debug.Log("Exit button clicked. Cannot exit playmode in the editor.");
+        UnityEditor.EditorApplication.isPlaying = false;
 #else
         Application.Quit();
 #endif
