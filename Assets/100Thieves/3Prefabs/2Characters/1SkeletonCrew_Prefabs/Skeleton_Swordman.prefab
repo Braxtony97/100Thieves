@@ -1829,14 +1829,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8762593979790515405}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071067, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1075973192429025064}
   m_Father: {fileID: 6784319099858781177}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &8768930514967609225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,6 +1847,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6784319099858781177}
   - component: {fileID: 4019061717511550032}
+  - component: {fileID: 4013646277193864378}
+  - component: {fileID: 997107815035256564}
   m_Layer: 0
   m_Name: Skeleton_Swordman
   m_TagString: Untagged
@@ -1862,7 +1864,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8768930514967609225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -1.74, y: -0.99, z: -5.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1870,7 +1872,7 @@ Transform:
   - {fileID: 7475042120878031015}
   - {fileID: 1056133826537102783}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &4019061717511550032
 Animator:
   serializedVersion: 7
@@ -1881,7 +1883,7 @@ Animator:
   m_GameObject: {fileID: 8768930514967609225}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 21c07d82bcf564f4b9c6f25bd3d004cd, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 733b7c0c9d99b284296cd6851ddffa97, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1893,6 +1895,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4013646277193864378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8768930514967609225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294262541cb6bf245872c2e45b8680d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 0
+  _moveSpeed: 2
+  _patrol: {fileID: 997107815035256564}
+  _targets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &997107815035256564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8768930514967609225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60f85bb092a1394bb285b79cac4a24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8913230018897328075
 GameObject:
   m_ObjectHideFlags: 0
